@@ -87,7 +87,7 @@ const Home = () => {
                 src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
                 key={movie.id}
                 className=" rounded-3xl w-full h-full object-cover hover-scale cursor-pointer"
-                onMouseOver={() => changeMoviePoster(movie.id)}
+                onClick={() => changeMoviePoster(movie.id)}
               />
             );
           })}
