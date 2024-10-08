@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   const goToDetailPage = (id) => {
-    navigate(`/show/movie/${id}`);
+    navigate(`/Disney_plus/show/movie/${id}`);
   };
 
   return (
@@ -45,7 +45,7 @@ const Home = () => {
           src={`https://image.tmdb.org/t/p/w1280/${mainMovie?.backdrop_path}`}
           className="w-full h-full object-cover"
         />
-        <div className="w-[80%] xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[40%] translate-y-[-40%] text-white">
+        <div className="w-[60%] xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[40%] translate-y-[-40%] text-white">
           <h1 className="text-7xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">
             {truncateTitle(mainMovie?.original_title, 12)}
           </h1>

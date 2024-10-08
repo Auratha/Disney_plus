@@ -7,12 +7,16 @@ const Carousel = ({ data, type }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location.pathname);
+  const getMoveImageCount = () => {
+    if (window.innerWidth < 640) return 1; // Mobile size: move 1 image
+    if (window.innerWidth < 1024) return 3; // Tablet size: move 3 images
+    return 5; // Default: move 5 images for larger screens
+  };
 
   useEffect(() => {
-    const imgWidth = 250;
+    const imgWidth = carousel.current.children[0]?.children[0].clientWidth; //take 1st img width from carousel children
     const totalImg = carousel.current.children.length;
-    const moveImage = 5;
+    const moveImage = getMoveImageCount();
     const gapWidth = 20;
     const moveWidth = moveImage * (imgWidth + gapWidth);
     let position = 0;
@@ -30,18 +34,18 @@ const Carousel = ({ data, type }) => {
       }
     };
 
-    const interval = setInterval(scroll, 7000);
+    // const interval = setInterval(scroll, 7000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, [data]);
 
   const goToDetailPage = (id) => {
-    if (location.pathname === "/movies") {
-      navigate(`/show/movie/${id}`);
+    if (location.pathname === "/Disney_plus/movies") {
+      navigate(`/Disney_plus/show/movie/${id}`);
     }
 
-    if (location.pathname === "/series") {
-      navigate(`/show/tv/${id}`);
+    if (location.pathname === "/Disney_plus/series") {
+      navigate(`/Disney_plus/show/tv/${id}`);
     }
   };
 
@@ -64,7 +68,7 @@ const Carousel = ({ data, type }) => {
             >
               <img
                 src={`https://image.tmdb.org/t/p/w1280/${info.backdrop_path}`}
-                className="max-w-[250px] h-full rounded-3xl object-cover"
+                className="max-w-[270px] h-full rounded-3xl object-cover"
                 alt={
                   type === "movie" ? info.original_title : info.original_name
                 }

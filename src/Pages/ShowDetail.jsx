@@ -54,9 +54,11 @@ const ShowDetail = () => {
   return (
     <div>
       <Hero handlePlayVideo={trailerFullScreen} movieInfo={movieInfo} />
-      <div className="bg-[#1a1d29] px-10 mx-auto">
-        <h1 className="mb-10 text-5xl text-white text-center">Trailer</h1>
-        <div className="w-[80%] h-auto relative aspect-video mx-auto">
+      <div className="bg-[#1a1d29] px-10 py-5 mx-auto ">
+        <h1 className="mb-10 text-5xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl text-white text-center">
+          Trailer
+        </h1>
+        <div className="w-[80%] md:w-[90%] xs:w-full h-auto relative aspect-video mx-auto">
           <iframe
             ref={iframeRef}
             className="w-full h-full"
@@ -68,14 +70,14 @@ const ShowDetail = () => {
             allowFullScreen
           ></iframe>
           {movieInfo?.key == null && (
-            <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center text-white text-5xl">
+            <div className="w-full h-full absolute top-0 left-0 flex justify-center items-center text-white text-5xl xs:text-2xl ">
               Video is not available
             </div>
           )}
         </div>
         <div className="mt-10 py-10">
           <h1 className="text-5xl text-white text-center">Similarity</h1>
-          <div className="grid grid-cols-4 gap-6 mt-10">
+          <div className="grid grid-cols-4 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
             {similar
               ?.filter((movie) => movie.id !== id)
               .map((movie) =>
@@ -84,7 +86,7 @@ const ShowDetail = () => {
                     key={movie.id}
                     src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
                     onClick={() => {
-                      navigate(`/show/${type}/${movie.id}`);
+                      navigate(`/Disney_plus/show/${type}/${movie.id}`);
                       window.scrollTo(0, 0);
                     }}
                     className="w-full h-full rounded-3xl cursor-pointer hover:scale-105 transition-all duration-300"
