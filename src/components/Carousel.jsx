@@ -34,9 +34,9 @@ const Carousel = ({ data, type }) => {
       }
     };
 
-    // const interval = setInterval(scroll, 7000);
+    const interval = setInterval(scroll, 7000);
 
-    // return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, [data]);
 
   const goToDetailPage = (id) => {

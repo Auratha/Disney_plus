@@ -47,7 +47,7 @@ const Movie = () => {
           src={`https://image.tmdb.org/t/p/w1280/${movies.latest[0]?.backdrop_path}`}
           className="w-full h-full object-cover"
         />
-        <div className="w-1/2 w-[60%] xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[50%] translate-y-[-50%] text-white">
+        <div className="w-1/2 xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[50%] translate-y-[-50%] text-white">
           <h1 className="text-8xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">
             {movies.latest[0]?.original_title}
           </h1>

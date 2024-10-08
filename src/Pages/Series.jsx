@@ -49,11 +49,11 @@ const Series = () => {
           src={`https://image.tmdb.org/t/p/w1280/${series.latest[0]?.backdrop_path}`}
           className="w-full h-full object-cover"
         />
-        <div className="w-1/2 w-[60%] xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[50%] translate-y-[-50%] text-white">
+        <div className="w-1/2 xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[50%] translate-y-[-50%] text-white">
           <h1 className="text-8xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl">
             {series.latest[0]?.original_name}
           </h1>
-          <p className="text-xl text-xl xs:text-xs sm:text-sm md:text-md lg:text-lg mt-8 mt-8">
+          <p className="text-xl xs:text-xs sm:text-sm md:text-md lg:text-lg mt-8 ">
             {series.latest[0]?.overview}
           </p>
           <div className="flex space-x-5 mt-8">
