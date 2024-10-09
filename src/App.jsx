@@ -23,8 +23,6 @@ function App() {
     }
   }, [loginActive]);
 
-  console.log(loginActive);
-
   return (
     <div className="font-indie">
       {location.pathname !== "/Disney_plus/login" && <Navbar />}

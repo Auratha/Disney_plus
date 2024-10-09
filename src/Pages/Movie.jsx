@@ -41,7 +41,7 @@ const Movie = () => {
 
   return (
     <div className="overflow-hidden">
-      <div className="w-full h-screen xs:h-[65vh] sm:h-[60vh] md:h-[90vh] relative">
+      <div className="w-full h-full xs:h-[25rem] sm:h-[30rem] md:h-[40rem]  relative">
         <div className="w-full h-full absolute bottom-0 bg-gradient-to-t from-[#1a1d29] to-transparent"></div>
         <img
           src={`https://image.tmdb.org/t/p/w1280/${movies.latest[0]?.backdrop_path}`}

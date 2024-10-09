@@ -6,7 +6,7 @@ const Hero = ({ handlePlayVideo, movieInfo }) => {
 
   return (
     <div className="overflow-hidden">
-      <div className="w-full h-screen xs:h-[65vh] sm:h-[75vh] md:h-[90vh] relative">
+      <div className="w-full h-full xs:h-[25rem] sm:h-[30rem] md:h-[40rem]  relative">
         <div className="w-full h-full absolute bottom-0 bg-gradient-to-t from-[#1a1d29] to-transparent"></div>
         <img src={imgPath} className="w-full h-full object-cover" />
         <div className="w-1/2 xs:w-full xs:mt-16 sm:w-full sm:mt-16 md:w-[80%] md:mt-10 lg:w-[70%] lg:mt-5 px-10 absolute top-[50%] translate-y-[-50%] text-white">

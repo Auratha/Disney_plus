@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-full h-screen xs:h-[65vh] sm:h-[60vh] md:h-[90vh]  relative">
+      <div className="w-full h-full xs:h-[25rem] sm:h-[30rem] md:h-[40rem]  relative">
         <div className="w-full h-full absolute bottom-0 bg-gradient-to-t from-[#1a1d29] to-transparent"></div>
         <img
           src={`https://image.tmdb.org/t/p/w1280/${mainMovie?.backdrop_path}`}
@@ -79,6 +79,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="bg-[#1a1d29] h-[3rem] w-full"></div>
       <div className="bg-[#1a1d29] hidden xs:block sm:block md:block lg:block pb-10">
         <div className="mx-10 grid grid-cols-5 gap-10 xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
           {fivePopularMovies.map((movie) => {

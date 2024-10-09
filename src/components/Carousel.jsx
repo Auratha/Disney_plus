@@ -6,17 +6,12 @@ const Carousel = ({ data, type }) => {
   const carousel = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
-
-  const getMoveImageCount = () => {
-    if (window.innerWidth < 640) return 1; // Mobile size: move 1 image
-    if (window.innerWidth < 1024) return 3; // Tablet size: move 3 images
-    return 5; // Default: move 5 images for larger screens
-  };
+  const intervalIdRef = useRef(null);
 
   useEffect(() => {
-    const imgWidth = carousel.current.children[0]?.children[0].clientWidth; //take 1st img width from carousel children
+    const imgWidth = carousel.current.children[0]?.children[0].clientWidth;
     const totalImg = carousel.current.children.length;
-    const moveImage = getMoveImageCount();
+    const moveImage = 1;
     const gapWidth = 20;
     const moveWidth = moveImage * (imgWidth + gapWidth);
     let position = 0;
@@ -34,9 +29,11 @@ const Carousel = ({ data, type }) => {
       }
     };
 
-    const interval = setInterval(scroll, 7000);
+    intervalIdRef.current = setInterval(scroll, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(intervalIdRef.current);
+    };
   }, [data]);
 
   const goToDetailPage = (id) => {
