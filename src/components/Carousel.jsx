@@ -9,7 +9,7 @@ const Carousel = ({ data, type }) => {
   const intervalIdRef = useRef(null);
 
   useEffect(() => {
-    const imgWidth = carousel.current.children[0]?.children[0].clientWidth;
+    const imgWidth = 250;
     const totalImg = carousel.current.children.length;
     const moveImage = 1;
     const gapWidth = 20;
