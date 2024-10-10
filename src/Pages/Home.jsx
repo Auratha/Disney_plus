@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-full h-full xs:h-[25rem] sm:h-[30rem] md:h-[40rem]  relative">
+      <div className="w-full h-[40rem] xs:h-[25rem] sm:h-[30rem] md:h-[40rem] relative">
         <div className="w-full h-full absolute bottom-0 bg-gradient-to-t from-[#1a1d29] to-transparent"></div>
         <img
           src={`https://image.tmdb.org/t/p/w1280/${mainMovie?.backdrop_path}`}
