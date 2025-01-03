@@ -59,7 +59,9 @@ const Movie = () => {
               <img src={infoLogo} alt="info" />{" "}
               <span
                 className="ml-2"
-                onClick={() => navigate(`/show/movie/${movies.latest[0]?.id}`)}
+                onClick={() =>
+                  navigate(`/Disney_plus/show/movie/${movies.latest[0]?.id}`)
+                }
               >
                 About Movie
               </span>
